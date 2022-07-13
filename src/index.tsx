@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Comento-Clone">
     <React.StrictMode>
       <App />
     </React.StrictMode>
