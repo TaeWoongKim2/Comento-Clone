@@ -1,27 +1,14 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CampDetails from './pages/CampDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Hello, React World With TypeScript!!!</h2>
-        <p>
-          Edit
-          {' '}
-          <code>src/App.tsx</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/details" element={<CampDetails />} />
+    </Routes>
   );
 }
 
