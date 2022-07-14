@@ -1,10 +1,19 @@
 import React from 'react';
 
+import CampCards from './components/CampCards';
+import CommuntyCards from './components/CommuntyCards';
+
 function Home() {
   return (
     <div className="container">
       <section>
         <h2>인기 부트 캠프</h2>
+        <CampCards />
+      </section>
+
+      <section>
+        <h2>특가 할인 캠프</h2>
+        <CampCards />
       </section>
 
       <section className="text__hr">
@@ -13,6 +22,7 @@ function Home() {
 
       <section>
         <h2>커뮤니티</h2>
+        <CommuntyCards />
       </section>
     </div>
   );
