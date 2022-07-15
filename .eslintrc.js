@@ -59,7 +59,9 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
+        cjs: 'never',
       },
     ],
+    'no-alert': 'off',
   },
 };
