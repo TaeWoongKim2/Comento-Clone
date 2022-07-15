@@ -45,7 +45,6 @@ function MenteeIntro() {
         onClick={handleClick}
       >
         다음
-
       </button>
     </div>
   );
