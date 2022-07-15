@@ -1,6 +1,10 @@
 import React from 'react';
 
 function MenteeIntro() {
+  const handleClick = () => {
+    alert('신청이 완료 되었습니다.');
+  };
+
   return (
     <div>
       <h1>MenteeIntro</h1>
@@ -35,6 +39,14 @@ function MenteeIntro() {
           placeholder="colab@example.com"
         />
       </label>
+
+      <button
+        type="button"
+        onClick={handleClick}
+      >
+        다음
+
+      </button>
     </div>
   );
 }
