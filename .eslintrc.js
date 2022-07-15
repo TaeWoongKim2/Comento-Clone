@@ -62,5 +62,6 @@ module.exports = {
         cjs: 'never',
       },
     ],
+    'no-alert': 'off',
   },
 };
