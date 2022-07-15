@@ -6,6 +6,7 @@ import CommonLayout from './commons/layouts/CommonLayout';
 
 import Home from './pages/Home/Home';
 import CampDetails from './pages/CampDetail/CampDetails';
+import CampApply from './pages/CampApply/CampApply';
 
 import NotFound from './commons/errors/NotFound';
 
@@ -17,6 +18,7 @@ function App() {
       </Route>
       <Route element={<CommonLayout />}>
         <Route path="/detail" element={<CampDetails />} />
+        <Route path="/apply" element={<CampApply />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
