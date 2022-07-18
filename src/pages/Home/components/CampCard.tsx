@@ -1,43 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ICampCard } from 'types/cards/CampCard';
 
-type CampCard = {
-  id: Number;
-  category: 'IT' | '디자인' | '기획';
-  lecture: '백엔드' | 'SQL' | '프론트';
-  status: '모집전' | '모집중' | '모집완료';
-  image: string;
-  title: string;
-  startDate: string;
-};
+type CampCardType = {
+  camp: ICampCard;
+  isPopular: boolean;
+}
 
 function CampCard({
-  id,
-  category,
-  lecture,
-  status,
-  image,
-  title,
-  startDate,
-}: CampCard) {
+  camp,
+  isPopular,
+}: CampCardType) {
   return (
-    <Link to={`/detail/${id}`}>
-      <div>
-        <img src={image} alt="camp_image" />
-        <p className="card__category">
-          {`${category}/${lecture}`}
-        </p>
-        <p className="card__category">
-          {status}
-        </p>
-        <p className="card__title">
-          {title}
-        </p>
-        <p className="card__date">
-          {startDate}
-        </p>
-      </div>
-    </Link>
+    <div>
+      <img src={camp.image} alt="camp_image" />
+      <p className="card__category">
+        {isPopular ? camp.status : `${camp.category}/${camp.skill}`}
+      </p>
+      <p className="card__title">
+        {camp.title}
+      </p>
+      <p className="card__date">
+        {camp.startDate}
+      </p>
+    </div>
   );
 }
 

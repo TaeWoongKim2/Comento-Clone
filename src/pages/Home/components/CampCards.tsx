@@ -1,42 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CampCards() {
+import { ICampCard } from 'types/cards/CampCard';
+import CampCard from './CampCard';
+
+type CampCardsType = {
+  camps: ICampCard[];
+  isPopular: boolean;
+}
+
+function CampCards({
+  camps,
+  isPopular,
+}: CampCardsType) {
   return (
     <>
-      <Link to="/detail">
-        <p className="card__category">
-          Category1
-        </p>
-        <p className="card__title">
-          Title1
-        </p>
-        <p className="card__date">
-          Start Date1
-        </p>
-      </Link>
-      <Link to="/detail">
-        <p className="card__category">
-          Category2
-        </p>
-        <p className="card__title">
-          Title2
-        </p>
-        <p className="card__date">
-          Start Date2
-        </p>
-      </Link>
-      <Link to="/detail">
-        <p className="card__category">
-          Category3
-        </p>
-        <p className="card__title">
-          Title3
-        </p>
-        <p className="card__date">
-          Start Date3
-        </p>
-      </Link>
+      {camps.map((camp: ICampCard) => (
+        <Link
+          to={`/detail/:${camp.id}`}
+          key={`${camp.category}-${camp.skill}-${camp.id}-`}
+        >
+          <CampCard
+            camp={camp}
+            isPopular={isPopular}
+          />
+        </Link>
+      ))}
     </>
   );
 }
