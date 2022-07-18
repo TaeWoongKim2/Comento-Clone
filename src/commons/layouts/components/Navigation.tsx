@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MainHeader() {
+function Navigation() {
   return (
     <div className="container">
       <div className="header__navigation">
@@ -32,4 +32,4 @@ function MainHeader() {
   );
 }
 
-export default MainHeader;
+export default Navigation;
