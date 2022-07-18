@@ -1,11 +1,14 @@
 import React from 'react';
 
+import ComboBox from './components/ComboBox';
 import CampCards from './components/CampCards';
 import CommuntyCards from './components/CommuntyCards';
 
 function Home() {
   return (
     <div className="container">
+      <ComboBox />
+
       <section>
         <h2>인기 부트 캠프</h2>
         <CampCards />
