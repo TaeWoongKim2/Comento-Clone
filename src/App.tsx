@@ -1,8 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import MainLayout from './commons/layouts/MainLayout';
-import CommonLayout from './commons/layouts/CommonLayout';
+import Layout from './commons/layouts/Layout';
 
 import Home from './pages/Home/Home';
 import CampDetails from './pages/CampDetail/CampDetails';
@@ -14,10 +13,8 @@ import NotFound from './commons/errors/NotFound';
 function App() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-      </Route>
-      <Route element={<CommonLayout />}>
         <Route path="/detail" element={<CampDetails />} />
         <Route path="/apply" element={<CampApply />} />
         <Route path="/community" element={<Community />} />
