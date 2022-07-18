@@ -18,7 +18,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src" // src/를 기준으로 절대 경로로 모듈 참조 가능!
   },
   "include": [
     "src"
