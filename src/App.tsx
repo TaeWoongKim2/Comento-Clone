@@ -15,7 +15,7 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/detail" element={<CampDetails />} />
+        <Route path="/detail/:id" element={<CampDetails />} />
         <Route path="/apply" element={<CampApply />} />
         <Route path="/community" element={<Community />} />
       </Route>
