@@ -1,11 +1,9 @@
-export interface CampCard {
+export interface ICampCard {
+  id: Number;
   category: 'IT' | '디자인' | '기획';
-  major: '백엔드' | 'SQL' | '프론트';
+  skill: '백엔드' | 'SQL' | '프론트' | '인공지능';
   image: string;
   title: string;
   startDate: string;
-}
-
-export interface PopularCampCard extends CampCard {
   status: '모집전' | '모집중' | '모집완료';
 }
