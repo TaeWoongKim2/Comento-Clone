@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { ReactComponent as Profile } from 'assets/icons/profile.svg';
+
 const Container = styled.header`
   color: var(--color-white);
   background: var(--bg-color-primary3);
@@ -24,6 +26,10 @@ const Container = styled.header`
       font-size: 18px;
       line-height: 32px;    
     }
+
+    .nav__menu li {
+      display: flex;
+    }
   }
 `;
 
@@ -36,9 +42,7 @@ function Navigation() {
         </Link>
         <ul className="nav__menu">
           <li>
-            <button type="button">
-              내 정보
-            </button>
+            <Profile />
           </li>
         </ul>
       </nav>
