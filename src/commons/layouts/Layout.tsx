@@ -1,14 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import MainHeader from './components/MainHeader';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 function MainLayout() {
   return (
     <div>
       <header>
-        <MainHeader />
+        <Navigation />
       </header>
       <main>
         <Outlet />
