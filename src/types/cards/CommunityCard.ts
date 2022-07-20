@@ -1,12 +1,16 @@
-export interface MentoAnswer {
-  profileImage: string;
-  id: string;
+export interface IMento {
+  nickname: string;
+  profile: string;
+}
+
+export interface IMentoAnswer extends IMento {
   answer: string;
 }
 
-export interface CommunityCard {
-  category: '취업고민';
+export interface ICommunityCard {
+  id: Number;
+  category: '취업고민' | '이직고민';
   title: string;
-  description: string;
-  answers: MentoAnswer[];
+  question: string;
+  answers: IMentoAnswer[];
 }
