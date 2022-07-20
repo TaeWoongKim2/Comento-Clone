@@ -124,7 +124,7 @@ const communties: ICommunityCard[] = [
 
 function Home() {
   return (
-    <div className="container">
+    <>
       <ComboBox />
 
       <section>
@@ -153,7 +153,7 @@ function Home() {
           communties={communties}
         />
       </section>
-    </div>
+    </>
   );
 }
 
