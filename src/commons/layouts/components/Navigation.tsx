@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { ReactComponent as Profile } from 'assets/icons/profile.svg';
+import { ReactComponent as Profile } from 'assets/icons/profile_bk.svg';
 
 const Container = styled.header`
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
   color: var(--color-white);
   background: var(--bg-color-primary3);
 
