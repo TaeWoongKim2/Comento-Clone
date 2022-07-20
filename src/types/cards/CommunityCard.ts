@@ -8,8 +8,9 @@ export interface IMentoAnswer extends IMento {
 }
 
 export interface ICommunityCard {
+  id: Number;
   category: '취업고민' | '이직고민';
   title: string;
-  description: string;
+  question: string;
   answers: IMentoAnswer[];
 }
