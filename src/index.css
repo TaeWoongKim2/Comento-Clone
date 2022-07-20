@@ -18,6 +18,11 @@
 
 body {
   margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   font-family: 'Noto Sans', 'Noto Sans CJK KR',
       -apple-system, 'Roboto', sans-serif;;
   font-style: normal;
@@ -40,6 +45,11 @@ h2 {
   line-height: 34px;
 }
 
+header {
+  color: var(--color-white);
+  background: var(--bg-color-primary3);
+}
+
 footer {
   padding: 32px 0;
   color: var(--color-gray2);
@@ -53,6 +63,31 @@ footer .container {
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.header__container {
+
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 16px 0 0;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.07em;
+}
+
+.header__navigation {
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .text__hr {

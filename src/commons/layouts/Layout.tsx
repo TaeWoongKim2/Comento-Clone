@@ -7,7 +7,9 @@ import Footer from './components/Footer';
 function MainLayout() {
   return (
     <div>
-      <Navigation />
+      <header>
+        <Navigation />
+      </header>
       <main>
         <Outlet />
       </main>
