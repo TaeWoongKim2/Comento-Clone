@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ICommunityCard } from 'types/cards/CommunityCard';
-import CommuntyCard from './CommuntyCard';
+import CommunityCard from './CommunityCard';
 
 type CommunityCardsType = {
   communties: ICommunityCard[];
 }
 
-function CommuntyCards({
+function CommunityCards({
   communties,
 }: CommunityCardsType) {
   return (
@@ -18,7 +18,7 @@ function CommuntyCards({
           to={`/community/${community.id}`}
           key={`${community.category}-${community.id}`}
         >
-          <CommuntyCard
+          <CommunityCard
             community={community}
             isHotTopic
           />
@@ -28,4 +28,4 @@ function CommuntyCards({
   );
 }
 
-export default CommuntyCards;
+export default CommunityCards;

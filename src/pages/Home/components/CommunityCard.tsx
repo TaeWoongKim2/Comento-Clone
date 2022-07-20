@@ -10,7 +10,7 @@ type CampCardsType = {
   isHotTopic: boolean;
 }
 
-function CommuntyCard({
+function CommunityCard({
   community,
   isHotTopic,
 }: CampCardsType) {
@@ -45,4 +45,4 @@ function CommuntyCard({
   );
 }
 
-export default CommuntyCard;
+export default CommunityCard;

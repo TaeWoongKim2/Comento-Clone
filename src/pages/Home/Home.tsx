@@ -5,7 +5,7 @@ import { ICommunityCard } from 'types/cards/CommunityCard';
 
 import ComboBox from './components/ComboBox';
 import CampCards from './components/CampCards';
-import CommuntyCards from './components/CommuntyCards';
+import CommunityCards from './components/CommunityCards';
 
 const CampsFixture: ICampCard[] = [
   {
@@ -149,7 +149,7 @@ function Home() {
 
       <section>
         <h2>커뮤니티</h2>
-        <CommuntyCards
+        <CommunityCards
           communties={communties}
         />
       </section>
