@@ -17,7 +17,7 @@ function CampCards({
     <>
       {camps.map((camp: ICampCard) => (
         <Link
-          to={`/detail/:${camp.id}`}
+          to={`/detail/${camp.id}`}
           key={`${camp.category}-${camp.skill}-${camp.id}-`}
         >
           <CampCard
