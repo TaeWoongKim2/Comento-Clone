@@ -26,6 +26,14 @@ module.exports = {
     },
   },
   rules: {
+    '@typescript-eslint/quotes': [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
     'import/no-unresolved': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     indent: ['error', 2],
@@ -64,4 +72,11 @@ module.exports = {
     ],
     'no-alert': 'off',
   },
+  'no-use-before-define': ['error', {
+    functions: false,
+    classes: false,
+    variables: false,
+    allowNamedExports: false,
+  }],
+  '@typescript-eslint/no-use-before-define': ['error'],
 };
