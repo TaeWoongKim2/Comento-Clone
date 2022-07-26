@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 
 import Home from './pages/Home';
-import CampDetails from './pages/CampDetail/CampDetails';
+import CampDetails from './pages/CampDetail';
 import CampApply from './pages/CampApply/CampApply';
 import Community from './pages/Community';
 
