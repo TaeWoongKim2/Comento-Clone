@@ -58,7 +58,11 @@ const Container = styled.section`
   }
 
   .section--content {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
 
+    height: 280px;
   }
 `;
 

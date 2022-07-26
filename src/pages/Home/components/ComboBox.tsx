@@ -40,9 +40,6 @@ function ComboBox() {
         </div>
         <div
           className="box--image"
-          style={{
-            backgroundImage: `url(${'https://cdn.comento.kr/images/pt/tmp/prefix_44UsYDVNuM.jpg'})`,
-          }}
         />
       </div>
     </ComboBoxSection>

@@ -26,6 +26,8 @@ module.exports = {
     },
   },
   rules: {
+    curly: 'error',
+    quotes: [2, 'single', { avoidEscape: true }],
     '@typescript-eslint/quotes': [
       'error',
       'single',
@@ -34,11 +36,9 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    'import/no-unresolved': 'off',
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     indent: ['error', 2],
-    curly: 'error',
     '@typescript-eslint/indent': ['error', 2],
+    'import/no-unresolved': 'off',
     'jsx-a11y/anchor-is-valid': ['error', { aspects: ['invalidHref', 'preferButton'] }],
     'no-console': ['error', { allow: ['error', 'info'] }],
     'react/no-danger': 0,
@@ -59,6 +59,7 @@ module.exports = {
     'key-spacing': ['error', { mode: 'strict' }],
     'linebreak-style': 'off',
     'no-proto': 'off',
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -71,12 +72,7 @@ module.exports = {
       },
     ],
     'no-alert': 'off',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
-  'no-use-before-define': ['error', {
-    functions: false,
-    classes: false,
-    variables: false,
-    allowNamedExports: false,
-  }],
-  '@typescript-eslint/no-use-before-define': ['error'],
 };

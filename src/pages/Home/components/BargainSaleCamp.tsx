@@ -36,7 +36,7 @@ const CampsFixture: ICampCard[] = [
     id: 4,
     category: 'IT',
     skill: '백엔드',
-    image: 'public/images/backend-cloud.png',
+    image: '',
     title: ' 클라우드 AWS 구축부터 운영까지 실무 AtoZ',
     startDate: '2월 18일부터',
     status: '모집완료',
@@ -58,7 +58,9 @@ const Container = styled.section`
   }
 
   .section--content {
-    
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
   }
 `;
 

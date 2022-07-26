@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import { ICampCard } from 'types/cards/CampCard';
 
 const Card = styled.article<{ camp: ICampCard }>`
-  padding: 16px
-  height: 280px;
-  background-image: url(${(props) => props.camp.image || 'assets/images/card-Image.png'});
+  padding: 16px;
+  height: calc(280px - 32px);
+  background-image: url(${(props) => props.camp.image || 'https://i.pinimg.com/736x/d0/2b/67/d02b677ce3291053430de6f448a1de24.jpg'});
   background-size: cover;
   background-position: center;
   border-radius: 10px;
-
 `;
 
 type CampCardType = {
