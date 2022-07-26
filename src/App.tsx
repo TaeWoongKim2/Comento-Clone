@@ -8,7 +8,7 @@ import CampDetails from './pages/CampDetail/CampDetails';
 import CampApply from './pages/CampApply/CampApply';
 import Community from './pages/Community/Community';
 
-import NotFound from './pages/Error/NotFound';
+import NotFound from './pages/Error';
 
 function App() {
   return (
