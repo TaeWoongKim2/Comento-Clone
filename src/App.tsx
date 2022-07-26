@@ -6,7 +6,7 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import CampDetails from './pages/CampDetail/CampDetails';
 import CampApply from './pages/CampApply/CampApply';
-import Community from './pages/Community/Community';
+import Community from './pages/Community';
 
 import NotFound from './pages/Error';
 
