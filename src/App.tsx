@@ -1,14 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Layout from './pages/Layout/Layout';
+import Layout from './pages/Layout';
 
-import Home from './pages/Home/Home';
-import CampDetails from './pages/CampDetail/CampDetails';
-import CampApply from './pages/CampApply/CampApply';
-import Community from './pages/Community/Community';
+import Home from './pages/Home';
+import CampDetails from './pages/CampDetail';
+import CampApply from './pages/CampApply';
+import Community from './pages/Community';
 
-import NotFound from './pages/Error/NotFound';
+import NotFound from './pages/Error';
 
 function App() {
   return (
