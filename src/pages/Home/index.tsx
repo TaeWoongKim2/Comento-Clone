@@ -5,7 +5,7 @@ import { ICommunityCard } from 'types/cards/CommunityCard';
 import ComboBox from './components/ComboBox';
 import PopularBootCamp from './components/PopularBootCamp';
 import BargainSaleCamp from './components/BargainSaleCamp';
-
+import MessageCard from './components/MessageCard';
 import CommunityCards from './components/CommunityCards';
 
 const communties: ICommunityCard[] = [
@@ -93,9 +93,7 @@ function Home() {
 
       <BargainSaleCamp />
 
-      <section className="text__hr">
-        <h2>현직자와 소통하며 배우는 실무 스킬, 퍼스널 트레이닝</h2>
-      </section>
+      <MessageCard />
 
       <section>
         <h2>커뮤니티</h2>
