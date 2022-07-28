@@ -73,6 +73,6 @@ module.exports = {
     ],
     'no-alert': 'off',
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/no-use-before-define': 'off',
   },
 };

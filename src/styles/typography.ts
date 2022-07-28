@@ -45,7 +45,8 @@ export default {
   `,
   Caption: css`
     font-family: 'Spoqa Han Sans Neo';
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: -0.01em;
