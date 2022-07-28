@@ -22,8 +22,6 @@ const Container = styled.section`
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
-
-    height: 280px;
   }
 `;
 

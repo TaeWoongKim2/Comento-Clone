@@ -37,17 +37,3 @@ footer {
 footer .container {
   margin-bottom: 32px;
 }
-
-.text__hr {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 42px;
-  height: 100px;
-  background: var(--bg-color-primary1);
-}
-
-.text__hr h2 {
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
-}
