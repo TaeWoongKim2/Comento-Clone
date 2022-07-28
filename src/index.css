@@ -27,13 +27,3 @@ body {
   line-height: 16px;
   letter-spacing: -0.01em;
 }
-
-footer {
-  padding: 32px 0;
-  color: var(--color-gray2);
-  background: var(--color-gray5);
-}
-
-footer .container {
-  margin-bottom: 32px;
-}
