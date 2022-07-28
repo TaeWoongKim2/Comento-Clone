@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { ICampCard } from 'types/cards/CampCard';
 import CampCard from './CampCard';
@@ -16,7 +17,7 @@ function CampCards({
   return (
     <>
       {camps.map((camp: ICampCard) => (
-        <Link
+        <CardLink
           to={`/detail/${camp.id}`}
           key={`${camp.category}-${camp.skill}-${camp.id}-`}
         >
@@ -24,10 +25,14 @@ function CampCards({
             camp={camp}
             isPopular={isPopular}
           />
-        </Link>
+        </CardLink>
       ))}
     </>
   );
 }
 
 export default CampCards;
+
+const CardLink = styled(Link)`
+  flex: 1;
+`;
