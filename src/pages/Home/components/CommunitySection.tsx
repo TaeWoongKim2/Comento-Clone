@@ -2,26 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import SaleCampsFixture from 'apis/__fixture__/CampsSaleFixture';
-import CampCards from './CampCards';
+import CommunityFixture from 'apis/__fixture__/CommunityFixture';
+import CommunityCards from './CommunityCards';
 
-function BargainSaleCamp() {
+function CommunitySection() {
   return (
     <Container>
       <SectionTitle>
-        특가 할인 캠프
+        커뮤니티
       </SectionTitle>
       <SectionBody>
-        <CampCards
-          camps={SaleCampsFixture}
-          isPopular={false}
+        <CommunityCards
+          communties={CommunityFixture}
         />
       </SectionBody>
     </Container>
   );
 }
 
-export default BargainSaleCamp;
+export default CommunitySection;
 
 const Container = styled.section`
   margin: 0 auto 48px;
