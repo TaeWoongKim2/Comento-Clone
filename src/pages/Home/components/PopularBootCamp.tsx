@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import CampsFixture from 'apis/__fixture__/CampsFixture';
+import CampsFixture from 'apis/__fixture__/CampsPopularFixture';
 import CampCards from './CampCards';
 
 function PopularBootCamp() {

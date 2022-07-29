@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import SaleCampsFixture from 'apis/__fixture__/SaleCampsFixture';
+import SaleCampsFixture from 'apis/__fixture__/CampsSaleFixture';
 import CampCards from './CampCards';
 
 function BargainSaleCamp() {
