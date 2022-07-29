@@ -8,7 +8,7 @@ import CampCards from './CampCards';
 function PopularBootCamp() {
   return (
     <Container>
-      <SectionTitle className="section--title">
+      <SectionTitle>
         인기 부트 캠프
       </SectionTitle>
       <SectionBody>

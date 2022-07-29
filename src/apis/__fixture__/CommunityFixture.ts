@@ -9,12 +9,12 @@ const CommunityFixture: ICommunityCard[] = [
     answers: [
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '',
       },
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '',
       },
     ],
@@ -27,12 +27,12 @@ const CommunityFixture: ICommunityCard[] = [
     answers: [
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '안녕하세요. 먼저 면접까지...',
       },
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '안녕하세요. 먼저 면접까지...',
       },
     ],
@@ -45,12 +45,12 @@ const CommunityFixture: ICommunityCard[] = [
     answers: [
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '',
       },
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '',
       },
     ],
@@ -63,12 +63,12 @@ const CommunityFixture: ICommunityCard[] = [
     answers: [
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '안녕하세요. 먼저 면접까지...',
       },
       {
         nickname: '멘토1342',
-        profile: 'public/images/mento_image',
+        profile: '',
         answer: '안녕하세요. 먼저 면접까지...',
       },
     ],

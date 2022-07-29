@@ -39,8 +39,8 @@ export default CampCard;
 const Card = styled.article<{ camp: ICampCard }>`
   display: flex;
   justify-content: flex-end;
-  align-items: end;
-  height: calc(280px - 32px);
+  align-items: flex-end;
+  height: 280px;
   color: var(--color-white);
   background-image: url(${(props) => props.camp.image || 'https://i.pinimg.com/736x/d0/2b/67/d02b677ce3291053430de6f448a1de24.jpg'});
   background-size: cover;

@@ -8,7 +8,7 @@ import CommunityCards from './CommunityCards';
 function CommunitySection() {
   return (
     <Container>
-      <SectionTitle className="section--title">
+      <SectionTitle>
         커뮤니티
       </SectionTitle>
       <SectionBody>
