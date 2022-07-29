@@ -1,6 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
+function ComboBox() {
+  return (
+    <ComboBoxSection>
+      <div className="box--content">
+        <div className="box--title">
+          {'개발은 \n카페인과 함께'}
+        </div>
+        <div
+          className="box--image"
+        />
+      </div>
+    </ComboBoxSection>
+  );
+}
+
+export default ComboBox;
+
 const ComboBoxSection = styled.section`
   margin: 0 0 64px;
   padding: 104px 0 56px;
@@ -30,20 +47,3 @@ const ComboBoxSection = styled.section`
     }
   }
 `;
-
-function ComboBox() {
-  return (
-    <ComboBoxSection>
-      <div className="box--content">
-        <div className="box--title">
-          {'개발은 \n카페인과 함께'}
-        </div>
-        <div
-          className="box--image"
-        />
-      </div>
-    </ComboBoxSection>
-  );
-}
-
-export default ComboBox;

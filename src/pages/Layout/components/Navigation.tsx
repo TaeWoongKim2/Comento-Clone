@@ -4,6 +4,25 @@ import styled from 'styled-components';
 
 import { ReactComponent as Profile } from 'assets/icons/profile_bk.svg';
 
+function Navigation() {
+  return (
+    <Container>
+      <nav>
+        <Link to="/" className="nav__logo">
+          Co-Lab
+        </Link>
+        <ul className="nav__menu">
+          <li>
+            <Profile />
+          </li>
+        </ul>
+      </nav>
+    </Container>
+  );
+}
+
+export default Navigation;
+
 const Container = styled.header`
   position: fixed;
   top: 0;
@@ -35,22 +54,3 @@ const Container = styled.header`
     }
   }
 `;
-
-function Navigation() {
-  return (
-    <Container>
-      <nav>
-        <Link to="/" className="nav__logo">
-          Co-Lab
-        </Link>
-        <ul className="nav__menu">
-          <li>
-            <Profile />
-          </li>
-        </ul>
-      </nav>
-    </Container>
-  );
-}
-
-export default Navigation;
