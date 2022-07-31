@@ -28,10 +28,12 @@ function CommunityCard({
             {community.category}
           </CommunityLabel>
         </CommunityHeader>
+
         <CommunityBody>
           <CommunityTitle>
             {community.title}
           </CommunityTitle>
+
           <CommunityContent>
             <p className="card__question">{community.question}</p>
           </CommunityContent>
@@ -58,11 +60,9 @@ function CommunityCard({
             </CommunityAnswer>
           )))}
         </CommunityAnswerBody>
+
         <CommunityAnswerFooter>
-          <AnswerMoreLink
-            to={`/community/${community.id}`}
-            key={`${community.category}-${community.id}`}
-          >
+          <AnswerMoreLink to={`/community/${community.id}`}>
             + 더보기
           </AnswerMoreLink>
         </CommunityAnswerFooter>
