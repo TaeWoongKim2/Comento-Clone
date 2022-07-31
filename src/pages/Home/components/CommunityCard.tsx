@@ -40,17 +40,19 @@ function CommunityCard({
 
       <CommunityAnswerContainer>
         <CommunityAnswerBody>
-          {community.answers.map(((answer: IMentoAnswer, index: number) => (
-            <CommunityAnswer key={`${`${answer.nickname}-${index}`}`}>
+          {community.answers.map(((mentoAnswer: IMentoAnswer, index: number) => (
+            <CommunityAnswer key={`${`${mentoAnswer.nickname}-${index}`}`}>
               <CommunityAnswerProfile>
-                <MentoProfile image={answer.profile} />
+                <MentoProfile image={mentoAnswer.profile} />
               </CommunityAnswerProfile>
               <CommunityAnswerContent>
                 <MentoNickName>
-                  {answer.nickname}
+                  {mentoAnswer.nickname}
                 </MentoNickName>
                 <MentoAnswer>
-                  {answer.answer}
+                  {mentoAnswer.answer
+                    ? mentoAnswer.answer
+                    : '\u00A0'}
                 </MentoAnswer>
               </CommunityAnswerContent>
             </CommunityAnswer>
