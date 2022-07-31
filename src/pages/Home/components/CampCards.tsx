@@ -16,10 +16,10 @@ function CampCards({
 }: CampCardsType) {
   return (
     <>
-      {camps.map((camp: ICampCard) => (
+      {camps.map((camp: ICampCard, index: number) => (
         <CardLink
           to={`/detail/${camp.id}`}
-          key={`${camp.category}-${camp.skill}-${camp.id}-`}
+          key={`${`{${index}-${camp.id}}`}`}
         >
           <CampCard
             camp={camp}
