@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -7,16 +7,16 @@ import { ReactComponent as Profile } from 'assets/icons/profile_bk.svg';
 function Navigation() {
   return (
     <Container>
-      <nav>
-        <Link to="/" className="nav__logo">
-          Co-Lab
-        </Link>
-        <ul className="nav__menu">
-          <li>
+      <Nav>
+        <NavLogo to="/">
+          NavLogo-Lab
+        </NavLogo>
+        <NavMenu>
+          <NavMenuItem>
             <Profile />
-          </li>
-        </ul>
-      </nav>
+          </NavMenuItem>
+        </NavMenu>
+      </Nav>
     </Container>
   );
 }
@@ -29,28 +29,28 @@ const Container = styled.header`
   width: -webkit-fill-available;
   color: var(--color-white);
   background: var(--bg-color-primary3);
+`;
 
-  nav {
-    margin: 0 auto;
-    padding: 16px;
-    max-width: 960px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+const Nav = styled.nav`
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-    .nav__logo {
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: -0.07em;
-    }
+const NavLogo = styled(Link)`
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.07em;
+`;
 
-    .nav__menu {
-      font-size: 18px;
-      line-height: 32px;    
-    }
+const NavMenu = styled.ul`
+  font-size: 18px;
+  line-height: 32px;  
+`;
 
-    .nav__menu li {
-      display: flex;
-    }
-  }
+const NavMenuItem = styled.li`
+  display: flex;
 `;
