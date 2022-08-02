@@ -18,7 +18,7 @@ const MessageSection = styled.div`
   padding: 33px 42px;
   height: 100px;
   max-width: 960px;
-  background: var(--bg-color-primary1);
+  background: ${Colors.primary1};
 `;
 
 const MessageBody = styled.div`

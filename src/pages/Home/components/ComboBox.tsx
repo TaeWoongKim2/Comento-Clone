@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Colors from 'styles/colors';
 
 function ComboBox() {
   return (
@@ -21,8 +22,8 @@ export default ComboBox;
 const ComboBoxSection = styled.section`
   margin: 0 0 64px;
   padding: 104px 0 56px;
-  color: var(--color-white);
-  background: var(--bg-color-primary3);
+  color: ${Colors.white};
+  background: ${Colors.primary3};
 
   .box--content {
     margin: 0 auto;
