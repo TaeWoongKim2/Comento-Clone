@@ -1,22 +1,6 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import "reset";
 
-:root {
-  --color-black: #000000;
-  --color-gray1: #212121;
-  --color-gray2: #616161;
-  --color-gray3: #A7A7A7;
-  --color-gray4: #CCCCCC;
-  --color-gray5: #EEEEEE;
-  --color-gray6: #F5F5F5;
-  --color-white: #FFFFFF;
-  --bg-color-primary1: #7471FF;
-  --bg-color-primary2: #CECBEF;
-  --bg-color-primary3: linear-gradient(97.88deg, #854BFF -84.42%, #7179FF 15.02%, #6D83FF 36.89%, #698BFF 54.79%, #6499FF 80.65%, #659BF7 108.49%, #669FEA 148.27%, #69A9CD 197.99%, #6CB1B2 239.75%);
-  --bg-color-secondary1: #24DBAF;
-  --bg-color-secondary2: #CDF3EA;
-}
-
 body {
   margin: 0;
   font-family: 'Spoqa Han Sans Neo', 'Noto Sans', 'Noto Sans CJK KR',
