@@ -1,20 +1,24 @@
 import React from 'react';
-import Mento from 'assets/images/Camp/mento-woong.jpeg';
+// import Mento from 'assets/images/Camp/mento-woong.jpeg';
 import styled from 'styled-components';
+import Typography from 'styles/typography';
+import Colors from 'styles/colors';
 
 function CampDetails() {
   return (
     <div>
       <ComboBox>
         <ComboBoxContainer>
-          <div>
-            <div>2기 모집</div>
-            <div>React 초보자를 위한 실무 프로젝트로 역량 업그레이드</div>
-            <div>React만큼은 실무에 제대로 활용하세요.</div>
+          <div className="combobox--header">
+            <div className="combobox--label">2기 모집</div>
+            <div className="combobox--title">
+              React 초보자를 위한
+              {'\n'}
+              실무 프로젝트로 역량 업그레이드
+            </div>
+            <div className="combobox--subtitle">React만큼은 실무에 제대로 활용하세요.</div>
           </div>
-          <div>
-            <img src={Mento} alt="mento" />
-          </div>
+          <div />
         </ComboBoxContainer>
       </ComboBox>
       <div className="wrapper">
@@ -315,11 +319,34 @@ const ComboBox = styled.div`
 `;
 
 const ComboBoxContainer = styled.div`
+  height: -webkit-fill-available;
   max-width: 960px;
-  padding: 16px;
+  padding: 0 16px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
+
+  .combobox--header {
+    color: ${Colors.white};
+
+    .combobox--label {
+      ${Typography.Caption};
+      width: fit-content;
+      height: 24px;
+      border: 1px solid ${Colors.white};
+      border-radius: 6px;
+      margin-bottom: 12px;
+      padding: 4.5px 8px;
+    }
+    .combobox--title {
+      ${Typography.H1};
+      white-space: pre-wrap;
+      margin-bottom: 12px;
+    }
+    .combobox--subtitle {
+      ${Typography.Body2};
+    }
+  }
 `;
