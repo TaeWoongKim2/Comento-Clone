@@ -1,8 +1,15 @@
 import React from 'react';
-// import Mento from 'assets/images/Camp/mento-woong.jpeg';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 import Colors from 'styles/colors';
+
+import IntroImage from 'assets/images/Camp/prefix_cDkHsa2N1M.png';
+import AfterCampImage from 'assets/images/Camp/prefix_52iAfyrV8h.png';
+import RecommendedTargetImage from 'assets/images/Camp/prefix_djPZPRMyao.png';
+
+import LearningPointLive from 'assets/images/Camp/pt-detail-differentiation-live.png';
+import LearningPointCurriculum from 'assets/images/Camp/pt-detail-differentiation-curriculum.png';
+import LearningPointQna from 'assets/images/Camp/pt-detail-differentiation-qna.png';
 
 function CampDetails() {
   return (
@@ -21,55 +28,70 @@ function CampDetails() {
           <div />
         </ComboBoxContainer>
       </ComboBox>
-      <div className="wrapper">
-        <div className="container intro">
-          <div>
-            <div>
-              대답없는 VOD 강의에 라이브로 답하다.
-              React만큼은 실무에 제대로 활용할 수 있도록,
-              오프라인 강의와 온라인 VOD의 장점만 모았습니다.
-            </div>
-            <div>
-              React만큼은 실무에 제대로 활용할 수 있도록,
-              오프라인 강의와 온라인 VOD의 장점만 모았습니다.
-            </div>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <div>LIVE CLASS</div>
-                <div>라이브로 묻고 해답을 얻으세요.</div>
-              </li>
-              <li>
-                <div>KEEP DOING</div>
-                <div>미루지 말고 실시간으로 만나요.</div>
-              </li>
-              <li>
-                <div>CAN DO</div>
-                <div>실무 과제를 풀며 제대로 활용해요.</div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img src="" alt="" />
-          </div>
-        </div>
 
-        <div className="container tobe">
-          <div>
+      <CampWrapper>
+        <CampContainer>
+          <CampIntro>
+            <div>
+              <CampHeaderEntity>
+                6주 후,
+                {'\n'}
+                React만큼은 실무에 제대로 활용하게 됩니다.
+              </CampHeaderEntity>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <div className="intro--list--title">라이브</div>
+                  <div className="intro--list--body">
+                    실시간으로 묻고 답하며
+                    {'\n'}
+                    고민은 빠르게 해결됩니다.
+                  </div>
+                </li>
+                <li className="intro--list-hr" />
+                <li>
+                  <div className="intro--list--title">실무 커리큘럼</div>
+                  <div className="intro--list--body">
+                    현직자가 만든 커리큘럼으로
+                    {'\n'}
+                    실무에 집중합니다.
+                  </div>
+                </li>
+                <li className="intro--list-hr" />
+                <li>
+                  <div className="intro--list--title">현업 적용</div>
+                  <div className="intro--list--body">
+                    실무 과제와 1:1 피드백으로
+                    {'\n'}
+                    현업에 적용합니다.
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img src={IntroImage} alt="IntroImage" />
+            </div>
+          </CampIntro>
+        </CampContainer>
+
+        <CampContainer className="tobe">
+          <CampHeaderEntity>
             트레이닝이 끝난 당신은
+            {'\n'}
             이렇게 됩니다.
-          </div>
+          </CampHeaderEntity>
           <div>
-            <img src="" alt="" />
+            <img src={AfterCampImage} alt="AfterCampImage" />
           </div>
-        </div>
+        </CampContainer>
 
-        <div className="container reviews">
-          <div>
+        <CampContainer className="reviews">
+          <CampHeaderEntity>
             먼저 트레이닝 받은 분들의
+            {'\n'}
             이야기를 들어보세요.
-          </div>
+          </CampHeaderEntity>
           <div>
             <div className="review-cards">
               <div className="review-card">
@@ -140,16 +162,17 @@ function CampDetails() {
               </div>
             </div>
           </div>
-        </div>
+        </CampContainer>
 
-        <div className="container mento">
-          <div>
+        <CampContainer className="mento">
+          <CampHeaderEntity>
             <div>&quot;</div>
             <div>
               생성부터 배포까지,
+              {'\n'}
               저와 함께 React 프로젝트를 시작해보세요!
             </div>
-          </div>
+          </CampHeaderEntity>
           <div>
             안녕하세요.
             저는 스타트업에서 서비스 출시와 운영을 경험했고 1인 기업으로 다수의 서비스를 외주 개발한 경험이 있는 멘토입니다.
@@ -196,64 +219,75 @@ function CampDetails() {
               </dl>
             </div>
           </div>
-        </div>
+        </CampContainer>
 
-        <div className="container recomended">
-          <div>
+        <CampContainer className="recomended">
+          <CampHeaderEntity>
             이런 분들이라면 꼭 들으세요!
-          </div>
+          </CampHeaderEntity>
           <div>
-            <img src="" alt="" />
+            <img src={RecommendedTargetImage} alt="RecommendedTargetImage" />
           </div>
-        </div>
+        </CampContainer>
 
-        <div className="container lecture">
-          <div>
+        <CampContainer className="lecture">
+          <CampHeaderEntity>
             React,
+            {'\n'}
             할 수 있게 만드는 3가지 학습 포인트
-          </div>
-          <div>
+          </CampHeaderEntity>
+          <CampLearningPoint>
             <ul>
               <li>
-                <div>
-                  <img src="" alt="" />
+                <div className="learning--point--image">
+                  <img src={LearningPointLive} alt="LearningPointLive" />
                 </div>
                 <div>
-                  <div>100% 라이브 세션</div>
-                  <div>
+                  <div className="learning--point--title">
+                    100% 라이브 세션
+                  </div>
+                  <div className="learning--point--body">
                     주차별 세션과 스터디까지,
+                    {'\n'}
                     라이브니까 몰입할 수 있어요.
                   </div>
                 </div>
               </li>
               <li>
-                <div>
-                  <img src="" alt="" />
+                <div className="learning--point--image">
+                  <img src={LearningPointCurriculum} alt="LearningPointCurriculum" />
                 </div>
                 <div>
-                  <div>실무 실습 과제</div>
-                  <div>
+                  <div className="learning--point--title">
+                    실무 실습 과제
+                  </div>
+                  <div className="learning--point--body">
                     매주 주어지는 실무 실습 과제로
+                    {'\n'}
                     이론부터 실습까지 마스터하세요.
                   </div>
                 </div>
               </li>
               <li>
-                <div>
-                  <img src="" alt="" />
+                <div className="learning--point--image">
+                  <img src={LearningPointQna} alt="LearningPointQna" />
                 </div>
-                <div>실시간 즉문즉답</div>
                 <div>
-                  <div>
+                  <div className="learning--point--title">
+                    실시간 즉문즉답
+                  </div>
+                  <div className="learning--point--body">
                     질문이 생기면 언제나
+                    {'\n'}
                     실시간으로 묻고 답변 받으세요.
                   </div>
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
+          </CampLearningPoint>
+        </CampContainer>
+      </CampWrapper>
+
       <div className="wrapper">
         <div>FAQ</div>
         <div>
@@ -347,6 +381,90 @@ const ComboBoxContainer = styled.div`
     }
     .combobox--subtitle {
       ${Typography.Body2};
+    }
+  }
+`;
+
+const CampWrapper = styled.div`
+  width: 960px;
+  margin: 32px auto 0;
+  padding: 0 16px;
+`;
+
+const CampContainer = styled.div`
+  width: 720px;
+  margin-bottom: 40px;
+  padding: 60px 0;
+  
+  &:nth-child(1) {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+`;
+
+const CampHeaderEntity = styled.div`
+  ${Typography.H3};
+  white-space: pre-wrap;
+`;
+
+const CampIntro = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 24px 0;
+
+    .intro--list--title {
+      ${Typography.Body1};
+    }
+
+    .intro--list--body {
+      ${Typography.Caption};
+      white-space: pre-wrap;
+      margin-top: 4px;
+    }
+
+    .intro--list-hr {
+      width: 1px;
+      background: #EAECEE;
+    }
+  }
+`;
+
+const CampLearningPoint = styled.div`
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 24px 0;
+    gap: 16px;
+
+    li {
+      flex: 1;
+      padding: 24px 16px;
+      text-align: center;
+      
+      .learning--point--image {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto 12px;
+      }
+      .learning--point--title {
+        ${Typography.Body2};
+        font-weight: 500;
+      }
+      .learning--point--body {
+        ${Typography.Caption};
+        white-space: pre-wrap;
+        margin-top: 6px;
+      }
     }
   }
 `;
