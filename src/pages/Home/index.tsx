@@ -16,7 +16,9 @@ function Home() {
 
   useEffect(() => {
     loadSaleCamps('popular');
-    loadSaleCamps('sale');
+    setTimeout(() => {
+      loadSaleCamps('sale');
+    }, 500);
   }, []);
 
   const loadSaleCamps = async (type: ICampType) => {
