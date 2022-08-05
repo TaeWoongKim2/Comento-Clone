@@ -35,7 +35,7 @@ const Container = styled.section`
 `;
 
 const SectionTitle = styled.div`
-    ${Typography.H2}
+  ${Typography.H2}
 `;
 
 const SectionBody = styled.div`

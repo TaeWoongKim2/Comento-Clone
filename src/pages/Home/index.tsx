@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { fetchCampsByType } from 'apis/api';
 import { ICamp, ICampType } from 'types/Camp';
+import CardsSkeleton from 'components/Skeleton/CardsSkeleton';
 
 import ComboBox from './components/ComboBox';
 import PopularBootCamp from './components/PopularBootCamp';
@@ -10,8 +11,8 @@ import MessageCard from './components/MessageCard';
 import CommunitySection from './components/CommunitySection';
 
 function Home() {
-  const [popularCamps, setPopularCamps] = useState<ICamp[]>([]);
-  const [saleCamps, setSaleCamps] = useState<ICamp[]>([]);
+  const [popularCamps, setPopularCamps] = useState<ICamp[]>();
+  const [saleCamps, setSaleCamps] = useState<ICamp[]>();
 
   useEffect(() => {
     loadSaleCamps('popular');
@@ -33,9 +34,17 @@ function Home() {
     <>
       <ComboBox />
 
-      <PopularBootCamp camps={popularCamps} />
+      {popularCamps ? (
+        <PopularBootCamp camps={popularCamps} />
+      ) : (
+        <CardsSkeleton />
+      )}
 
-      <BargainSaleCamp camps={saleCamps} />
+      {saleCamps ? (
+        <BargainSaleCamp camps={saleCamps} />
+      ) : (
+        <CardsSkeleton />
+      )}
 
       <MessageCard />
 

@@ -37,7 +37,7 @@ function CampCard({
 
 export default CampCard;
 
-const Card = styled.article<{ camp: ICamp }>`
+const Card = styled.div<{ camp: ICamp }>`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
