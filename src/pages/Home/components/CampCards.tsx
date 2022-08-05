@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { ICampCard } from 'types/cards/CampCard';
+import { ICamp } from 'types/Camp';
 import CampCard from './CampCard';
 
 type CampCardsType = {
-  camps: ICampCard[];
+  camps: ICamp[];
   isPopular: boolean;
 }
 
@@ -16,7 +16,7 @@ function CampCards({
 }: CampCardsType) {
   return (
     <>
-      {camps.map((camp: ICampCard, index: number) => (
+      {camps.map((camp: ICamp, index: number) => (
         <CardLink
           to={`/detail/${camp.id}`}
           key={`${`{${index}-${camp.id}}`}`}
