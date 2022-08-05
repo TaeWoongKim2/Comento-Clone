@@ -33,13 +33,13 @@ const Container = styled.div<{
     && css`
       background-image: linear-gradient(
         135deg,
-        #d7dbe2 0%,
+        #bcbcbc 0%,
         #ebeef2 40%,
-        #d7dbe2 80%,
+        #bcbcbc 80%,
         #ebeef2 100%
       );
       background-size: 400% 100%;
-      animation: ${skeletonAnimation} 1.3s linear infinite;
+      animation: ${skeletonAnimation} 1s linear infinite;
     `}
 `;
 
