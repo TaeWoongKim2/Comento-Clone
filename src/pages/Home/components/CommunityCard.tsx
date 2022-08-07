@@ -6,12 +6,12 @@ import Colors from 'styles/colors';
 import Typography from 'styles/typography';
 
 import {
-  ICommunity,
-  IMentoComent,
-} from 'types/Community';
+  ICommunityCard,
+  IMentoAnswer,
+} from 'types/cards/CommunityCard';
 
 type CampCardsType = {
-  community: ICommunity;
+  community: ICommunityCard;
 }
 
 function CommunityCard({
@@ -21,14 +21,12 @@ function CommunityCard({
     <CommunityWrapper>
       <CommunityQuestionContainer>
         <CommunityHeader>
-          {community.tags.map((tag: string, index: number) => (
-            <CommunityLabel
-              key={`${`${index}-${tag}`}`}
-              active={index === 0}
-            >
-              {tag}
-            </CommunityLabel>
-          ))}
+          <CommunityLabel active>
+            조회수 TOP
+          </CommunityLabel>
+          <CommunityLabel active={false}>
+            {community.category}
+          </CommunityLabel>
         </CommunityHeader>
 
         <CommunityBody>
@@ -37,25 +35,25 @@ function CommunityCard({
           </CommunityTitle>
 
           <CommunityContent>
-            <p className="card__question">{community.content}</p>
+            <p className="card__question">{community.question}</p>
           </CommunityContent>
         </CommunityBody>
       </CommunityQuestionContainer>
 
       <CommunityAnswerContainer>
         <CommunityAnswerBody>
-          {community.comments.map(((mentoComent: IMentoComent, index: number) => (
-            <CommunityAnswer key={`${`${mentoComent.nickname}-${index}`}`}>
+          {community.answers.map(((mentoAnswer: IMentoAnswer, index: number) => (
+            <CommunityAnswer key={`${`${mentoAnswer.nickname}-${index}`}`}>
               <CommunityAnswerProfile>
-                <MentoProfile image={mentoComent.profile} />
+                <MentoProfile image={mentoAnswer.profile} />
               </CommunityAnswerProfile>
               <CommunityAnswerContent>
                 <MentoNickName>
-                  {mentoComent.nickname}
+                  {mentoAnswer.nickname}
                 </MentoNickName>
                 <MentoAnswer>
-                  {mentoComent.content
-                    ? mentoComent.content
+                  {mentoAnswer.answer
+                    ? mentoAnswer.answer
                     : '\u00A0'}
                 </MentoAnswer>
               </CommunityAnswerContent>
@@ -149,7 +147,7 @@ const MentoProfile = styled.div<{ image: string }>`
   width: 30px;
   border-radius: 100%;
   ${(props) => (props.image
-    ? `background: url(${props.image});`
+    ? `background: ${props.image};`
     : `background-color: ${Colors.gray4};`)}
 `;
 const MentoNickName = styled.div`

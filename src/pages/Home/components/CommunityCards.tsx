@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ICommunity } from 'types/Community';
+import { ICommunityCard } from 'types/cards/CommunityCard';
 import CommunityCard from './CommunityCard';
 
 type CommunityCardsType = {
-  communties: ICommunity[];
+  communties: ICommunityCard[];
 }
 
 function CommunityCards({
@@ -12,9 +12,8 @@ function CommunityCards({
 }: CommunityCardsType) {
   return (
     <>
-      {communties.map((community: ICommunity, index: number) => (
+      {communties.map((community: ICommunityCard) => (
         <CommunityCard
-          key={`${`${index}-${community.id}`}`}
           community={community}
         />
       ))}
