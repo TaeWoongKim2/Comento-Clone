@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import CommunityFixture from 'apis/__fixture__/CommunityFixture';
+import { ICommunity } from 'types/Community';
 import CommunityCards from './CommunityCards';
 
-function CommunitySection() {
+type CommunityType = {
+  communities: ICommunity[];
+}
+
+function CommunitySection({
+  communities,
+}: CommunityType) {
   return (
     <Container>
       <SectionTitle>
@@ -13,7 +19,7 @@ function CommunitySection() {
       </SectionTitle>
       <SectionBody>
         <CommunityCards
-          communties={CommunityFixture}
+          communties={communities}
         />
       </SectionBody>
     </Container>
@@ -29,6 +35,7 @@ const Container = styled.section`
 
 const SectionTitle = styled.div`
     ${Typography.H2}
+    margin-bottom: 16px;
 `;
 
 const SectionBody = styled.div`

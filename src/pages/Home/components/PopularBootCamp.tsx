@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import CampsFixture from 'apis/__fixture__/CampsPopularFixture';
+import { ICamp } from 'types/Camp';
 import CampCards from './CampCards';
 
-function PopularBootCamp() {
+type CampType = {
+  camps: ICamp[];
+}
+
+function PopularBootCamp({
+  camps,
+}: CampType) {
   return (
     <Container>
       <SectionTitle>
@@ -13,7 +19,7 @@ function PopularBootCamp() {
       </SectionTitle>
       <SectionBody>
         <CampCards
-          camps={CampsFixture}
+          camps={camps}
           isPopular
         />
       </SectionBody>
@@ -29,7 +35,8 @@ const Container = styled.section`
 `;
 
 const SectionTitle = styled.div`
-    ${Typography.H2}
+  ${Typography.H2}
+  margin-bottom: 16px;
 `;
 
 const SectionBody = styled.div`
