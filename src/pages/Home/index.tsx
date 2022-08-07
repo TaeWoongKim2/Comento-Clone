@@ -5,6 +5,7 @@ import { ICamp, ICampType } from 'types/Camp';
 import { ICommunity } from 'types/Community';
 
 import CardsSkeleton from 'components/Skeleton/CardsSkeleton';
+import CommuntiesSkeleton from 'components/Skeleton/CommuntiesSkeleton';
 
 import ComboBox from './components/ComboBox';
 import PopularBootCamp from './components/PopularBootCamp';
@@ -62,7 +63,11 @@ function Home() {
 
       <MessageCard />
 
-      <CommunitySection communities={hotCommunities || []} />
+      {hotCommunities ? (
+        <CommunitySection communities={hotCommunities || []} />
+      ) : (
+        <CommuntiesSkeleton />
+      )}
     </>
   );
 }
