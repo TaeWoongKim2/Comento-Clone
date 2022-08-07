@@ -4,6 +4,8 @@
   "homepage": "https://taewoongkim2.github.io/Comento-Clone/",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.18.10",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +13,9 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "axios": "^0.27.2",
+    "mobx": "^6.6.1",
+    "mobx-react": "^7.5.2",
+    "mobx-react-lite": "^3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",

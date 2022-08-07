@@ -14,11 +14,11 @@ export const fetchCampsByType = async (type: ICampType): Promise<AxiosResponse<I
 };
 
 export const fetchCamp = async (campId: number) => {
-  const response = await axios.get(`${API_SERVER_URL}/camps/${campId}`);
-  return response.data;
+  const { data } = await axios.get(`${API_SERVER_URL}/camps/${campId}`);
+  return data;
 };
 
 export const fetchCommunites = async () => {
-  const response = await axios.get(`${API_SERVER_URL}/communities`);
-  return response.data;
+  const { data } = await axios.get(`${API_SERVER_URL}/communities`);
+  return data;
 };
