@@ -12,11 +12,11 @@ import LearningPointCurriculum from 'assets/images/Camp/pt-detail-differentiatio
 import LearningPointQna from 'assets/images/Camp/pt-detail-differentiation-qna.png';
 
 function CampDetails() {
-  const { campId } = useParams();
+  const { id } = useParams();
   const campStore = useContext(CampStore);
 
   useEffect(() => {
-    campStore.fetchCampById(Number(campId));
+    campStore.fetchCampById(Number(id));
   }, []);
 
   return (

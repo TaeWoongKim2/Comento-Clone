@@ -14,7 +14,6 @@ class CampStore {
   fetchCampById = async (id: number) => {
     const { data } = await fetchCamp(id);
     this.campDetail = data;
-    console.info(this.campDetail);
   };
 }
 
