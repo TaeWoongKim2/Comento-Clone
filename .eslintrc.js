@@ -32,7 +32,7 @@ module.exports = {
     curly: 'error',
     '@typescript-eslint/indent': ['error', 2],
     'jsx-a11y/anchor-is-valid': ['error', { aspects: ['invalidHref', 'preferButton'] }],
-    'no-console': ['error', { allow: ['error', 'info'] }],
+    'no-console': ['warn', { allow: ['warn', 'info'] }],
     'react/no-danger': 0,
     'no-trailing-spaces': 'error',
     'brace-style': 'error',
@@ -65,5 +65,7 @@ module.exports = {
     'no-alert': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
   },
 };
