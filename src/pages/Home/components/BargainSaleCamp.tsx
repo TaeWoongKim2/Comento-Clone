@@ -2,16 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 
-import { ICamp } from 'types/Camp';
+import SaleCampsFixture from 'apis/__fixture__/CampsSaleFixture';
 import CampCards from './CampCards';
 
-type CampType = {
-  camps: ICamp[];
-}
-
-function BargainSaleCamp({
-  camps,
-}: CampType) {
+function BargainSaleCamp() {
   return (
     <Container>
       <SectionTitle>
@@ -19,7 +13,7 @@ function BargainSaleCamp({
       </SectionTitle>
       <SectionBody>
         <CampCards
-          camps={camps}
+          camps={SaleCampsFixture}
           isPopular={false}
         />
       </SectionBody>
@@ -36,7 +30,6 @@ const Container = styled.section`
 
 const SectionTitle = styled.div`
     ${Typography.H2}
-    margin-bottom: 16px;
 `;
 
 const SectionBody = styled.div`

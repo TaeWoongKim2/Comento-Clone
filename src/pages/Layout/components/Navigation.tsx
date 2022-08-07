@@ -77,13 +77,7 @@ const Container = styled.header<{ isScrolled: boolean }>`
   position: fixed;
   top: 0;
   width: -webkit-fill-available;
-  ${(props) => (props.isScrolled
-    ? `
-      background: ${colors.white};
-      box-shadow: 0px 0px 10px 0px #999;
-    `
-    : colors.primary3
-  )};
+  background: ${(props) => (props.isScrolled ? colors.white : colors.primary3)};
 `;
 
 const Nav = styled.nav`
