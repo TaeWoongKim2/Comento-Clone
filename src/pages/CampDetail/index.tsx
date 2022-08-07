@@ -1,29 +1,38 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
+import CampStore from 'stores/CampStore';
+
 import styled from 'styled-components';
 import Typography from 'styles/typography';
 import Colors from 'styles/colors';
-
-import IntroImage from 'assets/images/Camp/prefix_cDkHsa2N1M.png';
-import AfterCampImage from 'assets/images/Camp/prefix_52iAfyrV8h.png';
-import RecommendedTargetImage from 'assets/images/Camp/prefix_djPZPRMyao.png';
 
 import LearningPointLive from 'assets/images/Camp/pt-detail-differentiation-live.png';
 import LearningPointCurriculum from 'assets/images/Camp/pt-detail-differentiation-curriculum.png';
 import LearningPointQna from 'assets/images/Camp/pt-detail-differentiation-qna.png';
 
 function CampDetails() {
+  const { campId } = useParams();
+  const campStore = useContext(CampStore);
+
+  useEffect(() => {
+    campStore.fetchCampById(Number(campId));
+  }, []);
+
   return (
     <div>
       <ComboBox>
         <ComboBoxContainer>
           <div className="combobox--header">
-            <div className="combobox--label">2기 모집</div>
-            <div className="combobox--title">
-              React 초보자를 위한
-              {'\n'}
-              실무 프로젝트로 역량 업그레이드
+            <div className="combobox--label">
+              2기 모집
             </div>
-            <div className="combobox--subtitle">React만큼은 실무에 제대로 활용하세요.</div>
+            <div className="combobox--title">
+              {campStore.campDetail?.name}
+            </div>
+            <div className="combobox--subtitle">
+              {campStore.campDetail?.desc}
+            </div>
           </div>
           <div />
         </ComboBoxContainer>
@@ -70,7 +79,10 @@ function CampDetails() {
               </ul>
             </div>
             <div>
-              <img src={IntroImage} alt="IntroImage" />
+              <img
+                src={campStore.campDetail?.images[0]}
+                alt="IntroImage"
+              />
             </div>
           </CampIntro>
         </CampContainer>
@@ -82,7 +94,10 @@ function CampDetails() {
             이렇게 됩니다.
           </CampHeaderEntity>
           <div>
-            <img src={AfterCampImage} alt="AfterCampImage" />
+            <img
+              src={campStore.campDetail?.images[1]}
+              alt="AfterCampImage"
+            />
           </div>
         </CampContainer>
 
@@ -226,7 +241,10 @@ function CampDetails() {
             이런 분들이라면 꼭 들으세요!
           </CampHeaderEntity>
           <div>
-            <img src={RecommendedTargetImage} alt="RecommendedTargetImage" />
+            <img
+              src={campStore.campDetail?.images[2]}
+              alt="RecommendedTargetImage"
+            />
           </div>
         </CampContainer>
 

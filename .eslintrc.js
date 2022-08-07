@@ -32,7 +32,7 @@ module.exports = {
     curly: 'error',
     '@typescript-eslint/indent': ['error', 2],
     'jsx-a11y/anchor-is-valid': ['error', { aspects: ['invalidHref', 'preferButton'] }],
-    'no-console': ['error', { allow: ['error', 'info'] }],
+    'no-console': ['warn', { allow: ['warn', 'info'] }],
     'react/no-danger': 0,
     'no-trailing-spaces': 'error',
     'brace-style': 'error',

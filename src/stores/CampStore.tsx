@@ -4,7 +4,7 @@ import { observable, makeObservable } from 'mobx';
 import { fetchCamp } from 'apis/api';
 import { ICampDetail } from 'types/Camp';
 
-class CampsStore {
+class CampStore {
   @observable campDetail: ICampDetail | null = null;
 
   constructor() {
@@ -14,7 +14,8 @@ class CampsStore {
   fetchCampById = async (id: number) => {
     const { data } = await fetchCamp(id);
     this.campDetail = data;
+    console.info(this.campDetail);
   };
 }
 
-export default createContext(new CampsStore());
+export default createContext(new CampStore());

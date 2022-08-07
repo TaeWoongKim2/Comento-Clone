@@ -12,8 +12,9 @@ function CommunityCards({
 }: CommunityCardsType) {
   return (
     <>
-      {communties.map((community: ICommunity) => (
+      {communties.map((community: ICommunity, index: number) => (
         <CommunityCard
+          key={`${`${index}-${community.id}`}`}
           community={community}
         />
       ))}
