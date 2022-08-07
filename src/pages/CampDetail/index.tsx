@@ -11,7 +11,7 @@ import LearningPointLive from 'assets/images/Camp/pt-detail-differentiation-live
 import LearningPointCurriculum from 'assets/images/Camp/pt-detail-differentiation-curriculum.png';
 import LearningPointQna from 'assets/images/Camp/pt-detail-differentiation-qna.png';
 
-function CampDetails() {
+function CampDetail() {
   const { id } = useParams();
   const campStore = useContext(CampStore);
 
@@ -362,7 +362,7 @@ function CampDetails() {
   );
 }
 
-export default CampDetails;
+export default CampDetail;
 
 const ComboBox = styled.div`
   height: 320px;
