@@ -31,8 +31,9 @@ const Container = styled.section`
   margin: 0 auto 48px;
   max-width: 960px;
   
-  .section-title {
+  .camp-title {
     ${Typography.H2}
+    margin-bottom: 16px;
   }
 
   .camp-cards {

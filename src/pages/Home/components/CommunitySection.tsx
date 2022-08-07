@@ -35,6 +35,7 @@ const Container = styled.section`
 
 const SectionTitle = styled.div`
     ${Typography.H2}
+    margin-bottom: 16px;
 `;
 
 const SectionBody = styled.div`

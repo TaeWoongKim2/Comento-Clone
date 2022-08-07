@@ -147,7 +147,7 @@ const MentoProfile = styled.div<{ image: string }>`
   width: 30px;
   border-radius: 100%;
   ${(props) => (props.image
-    ? `background: ${props.image};`
+    ? `background: url(${props.image});`
     : `background-color: ${Colors.gray4};`)}
 `;
 const MentoNickName = styled.div`
