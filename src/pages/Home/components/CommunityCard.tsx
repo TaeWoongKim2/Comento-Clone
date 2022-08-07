@@ -6,12 +6,12 @@ import Colors from 'styles/colors';
 import Typography from 'styles/typography';
 
 import {
-  ICommunityCard,
-  IMentoAnswer,
-} from 'types/cards/CommunityCard';
+  ICommunity,
+  IMentoComent,
+} from 'types/Community';
 
 type CampCardsType = {
-  community: ICommunityCard;
+  community: ICommunity;
 }
 
 function CommunityCard({
@@ -25,7 +25,7 @@ function CommunityCard({
             조회수 TOP
           </CommunityLabel>
           <CommunityLabel active={false}>
-            {community.category}
+            {community.tags}
           </CommunityLabel>
         </CommunityHeader>
 
@@ -35,25 +35,25 @@ function CommunityCard({
           </CommunityTitle>
 
           <CommunityContent>
-            <p className="card__question">{community.question}</p>
+            <p className="card__question">{community.content}</p>
           </CommunityContent>
         </CommunityBody>
       </CommunityQuestionContainer>
 
       <CommunityAnswerContainer>
         <CommunityAnswerBody>
-          {community.answers.map(((mentoAnswer: IMentoAnswer, index: number) => (
-            <CommunityAnswer key={`${`${mentoAnswer.nickname}-${index}`}`}>
+          {community.comments.map(((mentoComent: IMentoComent, index: number) => (
+            <CommunityAnswer key={`${`${mentoComent.nickname}-${index}`}`}>
               <CommunityAnswerProfile>
-                <MentoProfile image={mentoAnswer.profile} />
+                <MentoProfile image={mentoComent.profile} />
               </CommunityAnswerProfile>
               <CommunityAnswerContent>
                 <MentoNickName>
-                  {mentoAnswer.nickname}
+                  {mentoComent.nickname}
                 </MentoNickName>
                 <MentoAnswer>
-                  {mentoAnswer.answer
-                    ? mentoAnswer.answer
+                  {mentoComent.content
+                    ? mentoComent.content
                     : '\u00A0'}
                 </MentoAnswer>
               </CommunityAnswerContent>

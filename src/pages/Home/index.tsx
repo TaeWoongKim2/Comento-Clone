@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { fetchCampsByType } from 'apis/api';
+import { fetchCampsByType, fetchCommunites } from 'apis/api';
 import { ICamp, ICampType } from 'types/Camp';
+import { ICommunity } from 'types/Community';
+
 import CardsSkeleton from 'components/Skeleton/CardsSkeleton';
 
 import ComboBox from './components/ComboBox';
@@ -13,11 +15,15 @@ import CommunitySection from './components/CommunitySection';
 function Home() {
   const [popularCamps, setPopularCamps] = useState<ICamp[]>();
   const [saleCamps, setSaleCamps] = useState<ICamp[]>();
+  const [hotCommunities, setHotCommunities] = useState<ICommunity[]>();
 
   useEffect(() => {
     loadSaleCamps('popular');
     setTimeout(() => {
       loadSaleCamps('sale');
+    }, 500);
+    setTimeout(() => {
+      loadCommunities();
     }, 500);
   }, []);
 
@@ -30,6 +36,12 @@ function Home() {
       return;
     }
     setSaleCamps(camps);
+  };
+
+  const loadCommunities = async () => {
+    const response = await fetchCommunites();
+    const { data: communities } = response;
+    setHotCommunities(communities);
   };
 
   return (
@@ -50,7 +62,7 @@ function Home() {
 
       <MessageCard />
 
-      <CommunitySection />
+      <CommunitySection communities={hotCommunities || []} />
     </>
   );
 }

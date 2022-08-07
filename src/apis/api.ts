@@ -17,3 +17,8 @@ export const fetchCamp = async (campId: number) => {
   const response = await axios.get(`${API_SERVER_URL}/camps/${campId}`);
   return response.data;
 };
+
+export const fetchCommunites = async () => {
+  const response = await axios.get(`${API_SERVER_URL}/communities`);
+  return response.data;
+};
