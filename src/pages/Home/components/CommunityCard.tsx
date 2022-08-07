@@ -21,12 +21,14 @@ function CommunityCard({
     <CommunityWrapper>
       <CommunityQuestionContainer>
         <CommunityHeader>
-          <CommunityLabel active>
-            조회수 TOP
-          </CommunityLabel>
-          <CommunityLabel active={false}>
-            {community.tags}
-          </CommunityLabel>
+          {community.tags.map((tag: string, index: number) => (
+            <CommunityLabel
+              key={`${`${index}-${tag}`}`}
+              active={index === 0}
+            >
+              {tag}
+            </CommunityLabel>
+          ))}
         </CommunityHeader>
 
         <CommunityBody>
