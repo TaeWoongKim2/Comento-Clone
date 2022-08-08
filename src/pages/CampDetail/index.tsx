@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { observer } from 'mobx-react-lite';
 
 import CampStore from 'stores/CampStore';
 
@@ -362,7 +363,7 @@ function CampDetail() {
   );
 }
 
-export default CampDetail;
+export default observer(CampDetail);
 
 const ComboBox = styled.div`
   height: 320px;

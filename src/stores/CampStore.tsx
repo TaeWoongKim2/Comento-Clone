@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { observable, makeObservable } from 'mobx';
+import { observable, makeObservable, action } from 'mobx';
 
 import { fetchCamp } from 'apis/api';
 import { ICampDetail } from 'types/Camp';
@@ -11,7 +11,7 @@ class CampStore {
     makeObservable(this);
   }
 
-  fetchCampById = async (id: number) => {
+  @action fetchCampById = async (id: number) => {
     const { data } = await fetchCamp(id);
     this.campDetail = data;
   };

@@ -1,14 +1,14 @@
-import axios, { AxiosResponse } from 'axios';
-import { ICampType, ICamp } from 'types/Camp';
+import axios from 'axios';
+import { ICampType } from 'types/Camp';
 
 const API_SERVER_URL = 'https://caffein-server.herokuapp.com/api';
 
-export const fetchCamps = async (): Promise<AxiosResponse<any>> => {
+export const fetchCamps = async () => {
   const { data } = await axios.get(`${API_SERVER_URL}/camps`);
   return data;
 };
 
-export const fetchCampsByType = async (type: ICampType): Promise<AxiosResponse<ICamp[]>> => {
+export const fetchCampsByType = async (type: ICampType) => {
   const { data } = await axios.get(`${API_SERVER_URL}/camps?type=${type}`);
   return data;
 };
