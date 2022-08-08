@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Comento-Clone/static/css/main.3a92f350.css",
+    "main.js": "/Comento-Clone/static/js/main.9b54e2a7.js",
+    "static/media/pt-detail-differentiation-curriculum.png": "/Comento-Clone/static/media/pt-detail-differentiation-curriculum.805d5eff88e05af9d1af.png",
+    "static/media/pt-detail-differentiation-live.png": "/Comento-Clone/static/media/pt-detail-differentiation-live.964bc327940b835735a8.png",
+    "static/media/pt-detail-differentiation-qna.png": "/Comento-Clone/static/media/pt-detail-differentiation-qna.55368c5e796996e5dffe.png",
+    "index.html": "/Comento-Clone/index.html",
+    "main.3a92f350.css.map": "/Comento-Clone/static/css/main.3a92f350.css.map",
+    "main.9b54e2a7.js.map": "/Comento-Clone/static/js/main.9b54e2a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a92f350.css",
+    "static/js/main.9b54e2a7.js"
+  ]
+}
